@@ -1,4 +1,6 @@
-AUTHOR = 'yes'
+from pathlib import Path
+
+AUTHOR = 'TheoStuff'
 SITENAME = 'TheoStuff'
 SITEURL = ''
 
@@ -6,7 +8,7 @@ PATH = 'content'
 
 TIMEZONE = 'America/Fortaleza'
 
-DEFAULT_LANG = 'pt'
+DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -16,16 +18,16 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = ()
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = ()
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = True
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+# Themes
+p = Path(__file__).parent
+THEME = p / 'themes/pelican-alchemy/alchemy'
