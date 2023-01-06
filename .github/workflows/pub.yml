@@ -19,7 +19,8 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install -r requirements.txt
-      - run: make html
+      - run: make publish
+      - run: ls output/
       - name: gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
