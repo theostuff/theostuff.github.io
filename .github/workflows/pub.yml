@@ -1,0 +1,28 @@
+name: "pub"
+on:
+  push:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  pub:
+    name: build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+    steps:
+      - uses: actions/checkout@v2
+      uses: actions/setup-python@v2
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: make html
+      - name: gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          destination_dir: ./
