@@ -15,9 +15,9 @@ jobs:
       fail-fast: true
     steps:
       - uses: actions/checkout@v2
-      uses: actions/setup-python@v2
-        with:
-          python-version: "3.11"
+      - uses: actions/setup-python@v2
+          with:
+            python-version: "3.11"
       - run: pip install -r requirements.txt
       - run: make html
       - name: gh-pages
