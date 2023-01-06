@@ -23,7 +23,7 @@ LINKS = ()
 # Social widget
 SOCIAL = ()
 
-DEFAULT_PAGINATION = True
+DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -31,3 +31,15 @@ DEFAULT_PAGINATION = True
 # Themes
 p = Path(__file__).parent
 THEME = p / 'themes/pelican-alchemy/alchemy'
+FAVICON = "/images/favicon.ico"
+HIDE_AUTHORS = True
+MAIN_MENU = True
+MENUITEMS = (
+    ("Archives", "/archives.html"),
+    ("Categories", "/categories.html"),
+    ("Tags", "/tags.html"),
+)
+
+THEME_COLOR = 'dark'
+THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
+THEME_COLOR_ENABLE_USER_OVERRIDE = True

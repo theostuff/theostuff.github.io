@@ -19,3 +19,8 @@ DELETE_OUTPUT_DIRECTORY = True
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
+
+FAVICON = "/favicon.ico"
+SITENAME = "Foo Bar's Blog"
+SITETITLE = "Foo Bar"
+SITESUBTITLE = "Web Developer"
