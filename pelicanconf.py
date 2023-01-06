@@ -30,7 +30,7 @@ DEFAULT_PAGINATION = 10
 
 # Themes
 p = Path(__file__).parent
-THEME = p / 'themes/pelican-alchemy/alchemy'
+THEME = p / 'themes/alchemy'
 FAVICON = "/images/favicon.ico"
 HIDE_AUTHORS = True
 MAIN_MENU = True
